@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="abc.css">
+  <title>Login & Registration form</title>
+  
+</head>
+<body>
+ <div class="container">
+     <div class="forms">
+         <div class="form login">
+             <span class="title">Login</span>
+             <form action="#">
+                 <div class="input-field">
+                   <input type="text " placeholder="Enter your email" required>
+                   <i class="uil uil-envelope icon"></i>                  
+                 </div>
+                 <div class="input-field">
+                    <input type="password" id="password1" placeholder="Enter your password" required>
+                    <i class="uil uil-lock icon"></i>       
+                    <button type="button" onclick="pass1()"><i id="show1" class="uil uil-eye-slash showHidePw"></i></button>                  
+                  </div>
+                  <div class="checkbox-text" >
+                    <div class="checkbox-content">
+                      <input type="checkbox" id="logchec">
+                      <label for="logcheck" class="text">Remember me</label>
+                    </div>
+                    <a href="#" class="text">Forgot password</a>
+                  </div>
+                  <div class="input-field button">
+                    <input type="button" value="Login in" >                 
+                  </div>
+             </form>
+             <div class="signup">
+              <span class="text">Not a member?
+                <a href="#" class="text signup-link"> signup</a>
+              </span>
+             </div>
+         </div>
+
+         <div class="form login">
+          <span class="title">Registration</span>
+          <form action="#">
+            <div class="input-field">
+              <input type="text " placeholder="Enter your name" required>
+              <i class="uil uil-user"></i>                  
+            </div>
+              <div class="input-field">
+                <input type="text " placeholder="Enter your email" required>
+                <i class="uil uil-envelope icon"></i>                  
+              </div>
+              <div class="input-field">
+                 <input type="password" id="password2" placeholder="Enter your password" required>
+                 <i class="uil uil-lock icon"></i>       
+                 <button type="button" onclick="pass2()"><i id="show2" class="uil uil-eye-slash showHidePw"></i></button>                  
+               </div>
+               <div class="input-field">
+                <input type="password" id="password3" placeholder="Enter your password" required>
+                <i class="uil uil-lock icon"></i>       
+                <button type="button" onclick="pass3()"><i id="show3" class="uil uil-eye-slash showHidePw"></i></button>                  
+              </div>
+               <div class="checkbox-text" >
+                 <div class="checkbox-content">
+                   <input type="checkbox" id="logcheck">
+                   <label for="logcheck" class="text">Remember me</label>
+                 </div>
+                 <a href="#" class="text">Forgot password</a>
+               </div>
+               <div class="input-field button">
+                 <input type="button" value="Login in" >                 
+               </div>
+          </form>
+          <div class="signup">
+           <span class="text">Not a member?
+             <a href="#" class="text Login-link"> Login</a>
+           </span>
+          </div>
+      </div>
+     </div>
+ </div>
+ <script>
+   var a1=document.getElementById("password1");
+   var b1=document.getElementById("show1")
+  function pass1(){
+      if(a1.type ==="password"){
+          a1.type="text";
+          b1.classList.replace("uil-eye-slash","uil-eye");
+      }
+      else{
+          a1.type="password";
+          b1.classList.replace("uil-eye","uil-eye-slash");
+      }
+  }
+  var a2=document.getElementById("password2");
+  var b2=document.getElementById("show2")
+  function pass2(){
+      if(a2.type ==="password"){
+          a2.type="text";
+          b2.classList.replace("uil-eye-slash","uil-eye");
+      }
+      else{
+          a2.type="password";
+          b2.classList.replace("uil-eye","uil-eye-slash");
+      }
+  }
+  var a3=document.getElementById("password3");
+  var b3=document.getElementById("show3")
+  function pass3(){
+      if(a3.type ==="password"){
+          a3.type="text";
+          b3.classList.replace("uil-eye-slash","uil-eye");
+      }
+      else{
+          a3.type="password";
+          b3.classList.replace("uil-eye","uil-eye-slash");
+      }
+
+  }
+        var container=document.querySelector(".container"),signup=document.querySelector(".sign-link"),
+      Login=document.querySelector(".Login-link");
+      signup.addEventListener("click",()=>{
+        container.classList.add("active");
+      });
+      Login.addEventListener("click",()=>{
+        container.classList.remove("active");
+      });
+ </script>
+</body>
+</html>
